@@ -38,6 +38,7 @@
         --paper: #f0ebde;
         --ink: #002ad9;
         --grid: rgba(0, 42, 217, 0.08);
+        --base-scale: 1.35;
       }
 
       * {
@@ -90,7 +91,7 @@
         background-image:
           linear-gradient(to right, var(--grid) 1px, transparent 1px),
           linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
-        background-size: clamp(28px, 2.2vw, 44px) clamp(28px, 2.2vw, 44px);
+        background-size: clamp(32px, 2.5vw, 50px) clamp(32px, 2.5vw, 50px);
         pointer-events: none;
         z-index: 1;
       }
@@ -231,21 +232,21 @@
           <div class="flex justify-between items-start mt-6">
             <div class="max-w-[65%]">
               <span
-                class="font-mono text-xs md:text-sm tracking-[0.2em] font-bold block mb-2 uppercase"
+                class="font-mono text-sm md:text-base tracking-[0.2em] font-bold block mb-3 uppercase"
                 >Apresentação de Projeto</span
               >
               <h1
-                class="font-newsreader text-6xl md:text-[8xl] leading-none font-bold tracking-tight text-ink"
+                class="font-newsreader text-7xl md:text-[10rem] leading-none font-bold tracking-tight text-ink"
               >
                 AXIOMA
               </h1>
-              <div class="mt-4 md:mt-6">
+              <div class="mt-6 md:mt-8">
                 <span
-                  class="font-mono text-xs md:text-sm text-ink-soft tracking-wider block uppercase font-semibold"
+                  class="font-mono text-sm md:text-base text-ink-soft tracking-wider block uppercase font-semibold"
                   >Paradigmas Combinados</span
                 >
                 <p
-                  class="font-newsreader text-2xl md:text-3xl italic text-ink leading-tight mt-1"
+                  class="font-newsreader text-3xl md:text-4xl italic text-ink leading-tight mt-2"
                 >
                   Programação Lógica + Orientada a Aspectos em Python
                 </p>
@@ -264,37 +265,37 @@
           </div>
 
           <!-- Metadados da Capa -->
-          <div class="mb-14 grid grid-cols-3 gap-6 border-t border-ink/40 pt-4">
+          <div class="mb-14 grid grid-cols-3 gap-6 border-t border-ink/40 pt-5">
             <div>
               <span
-                class="font-mono text-[10px] uppercase tracking-wider block text-ink/70"
+                class="font-mono text-[12px] uppercase tracking-wider block text-ink/70"
                 >Discentes</span
               >
-              <span class="font-hanken text-sm md:text-base font-semibold block"
+              <span class="font-hanken text-base md:text-lg font-semibold block"
                 >Grupo AXIOMA</span
               >
             </div>
             <div>
               <span
-                class="font-mono text-[10px] uppercase tracking-wider block text-ink/70"
+                class="font-mono text-[12px] uppercase tracking-wider block text-ink/70"
                 >Componente Curricular</span
               >
-              <span class="font-hanken text-sm md:text-base font-semibold block"
+              <span class="font-hanken text-base md:text-lg font-semibold block"
                 >AL0337 — Resolução de Problemas III (UNIPAMPA)</span
               >
             </div>
             <div>
               <span
-                class="font-mono text-[10px] uppercase tracking-wider block text-ink/70"
+                class="font-mono text-[12px] uppercase tracking-wider block text-ink/70"
                 >Docentes</span
               >
-              <span class="font-hanken text-sm md:text-base font-semibold block"
+              <span class="font-hanken text-base md:text-lg font-semibold block"
                 >Prof. Paulo Silas Severo &amp; Prof. Silvio Ereno
                 Quincozes</span
               >
             </div>
           </div>
-          <div class="pagenum absolute right-12 bottom-8 font-mono text-xs">
+          <div class="pagenum absolute right-12 bottom-8 font-mono text-sm">
             01 / 08
           </div>
         </section>
@@ -305,83 +306,93 @@
         <section
           class="slide s-domain hairlines px-10 md:px-20 pt-20 pb-16 flex flex-col justify-between h-full"
         >
-          <div class="grid grid-cols-12 gap-8 items-start">
-            <div class="col-span-7">
-              <span
-                class="font-mono text-xs tracking-wider block uppercase text-ink-soft mb-1 font-bold"
-                >01. O Domínio</span
-              >
-              <h2
-                class="font-newsreader text-4xl md:text-5xl font-bold leading-tight mb-4"
-              >
-                Complexidade Acadêmica da Pós-Graduação
-              </h2>
-              <p
-                class="font-hanken text-sm md:text-base leading-relaxed text-ink/90"
-              >
-                Acompanhar discentes durante ~24 meses envolve regras altamente
-                dinâmicas: controle de créditos obrigatórios por grupo,
-                proficiência em idiomas, validação de atividades creditáveis com
-                limites por categoria, prorrogações de prazos e prazos de etapas
-                (qualificação e defesa).
-              </p>
+          <div>
+            <span
+              class="font-mono text-sm tracking-wider block uppercase text-ink-soft mb-2 font-bold"
+              >01. O Domínio</span
+            >
+            <h2
+              class="font-newsreader text-5xl md:text-6xl font-bold leading-tight mb-4"
+            >
+              Complexidade Acadêmica da Pós-Graduação
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-2 gap-8 items-stretch my-auto">
+            <!-- Lado Esquerdo: Descrição do Domínio -->
+            <div
+              class="border border-ink p-5 bg-paper/60 flex flex-col justify-between"
+            >
+              <div>
+                <span
+                  class="font-mono text-sm tracking-widest font-bold block uppercase border-b border-ink/30 pb-2 mb-3 text-ink-soft"
+                  >O Desafio Acadêmico</span
+                >
+                <p class="leading-relaxed mb-3 text-base">
+                  Acompanhar discentes durante ~24 meses envolve regras altamente
+                  dinâmicas: controle de créditos obrigatórios por grupo,
+                  proficiência em idiomas, validação de atividades creditáveis com
+                  limites por categoria, prorrogações de prazos e prazos de etapas
+                  (qualificação e defesa).
+                </p>
+              </div>
               <div
-                class="mt-6 border-l-2 border-ink pl-4 py-1 italic text-sm md:text-base bg-ink/5"
+                class="border-l-2 border-ink pl-4 py-1 italic text-base bg-ink/5"
               >
                 "As regras de negócio institucionais mudam com frequência,
                 exigindo um design altamente desacoplado e declarativo."
               </div>
             </div>
 
-            <!-- Listagem de Estados de Domínio -->
+            <!-- Lado Direito: Estados de Domínio -->
             <div
-              class="col-span-5 border border-ink p-4 bg-paper/60 self-center"
+              class="border border-ink p-5 bg-paper/60 flex flex-col justify-between"
             >
               <span
-                class="font-mono text-[10px] tracking-widest font-bold uppercase block mb-3 text-center border-b border-ink/30 pb-2"
+                class="font-mono text-xs tracking-widest font-bold uppercase block mb-3 text-center border-b border-ink/30 pb-2"
                 >Situações Acadêmicas Inferidas</span
               >
-              <div class="grid grid-cols-2 gap-2 text-xs font-mono">
+              <div class="grid grid-cols-2 gap-3 text-sm font-mono">
                 <div
-                  class="flex items-center gap-2 p-1.5 border border-ink/30 bg-green-500/10"
+                  class="flex items-center gap-2 p-2 border border-ink/30 bg-green-500/10"
                 >
-                  <span class="w-2.5 h-2.5 bg-green-600 rounded-full"></span>
+                  <span class="w-3 h-3 bg-green-600 rounded-full"></span>
                   Regular
                 </div>
                 <div
-                  class="flex items-center gap-2 p-1.5 border border-ink/30 bg-blue-500/10"
+                  class="flex items-center gap-2 p-2 border border-ink/30 bg-blue-500/10"
                 >
-                  <span class="w-2.5 h-2.5 bg-blue-600 rounded-full"></span> Em
+                  <span class="w-3 h-3 bg-blue-600 rounded-full"></span> Em
                   Prorrogação
                 </div>
                 <div
-                  class="flex items-center gap-2 p-1.5 border border-ink/30 bg-red-500/10"
+                  class="flex items-center gap-2 p-2 border border-ink/30 bg-red-500/10"
                 >
-                  <span class="w-2.5 h-2.5 bg-red-600 rounded-full"></span> Em
+                  <span class="w-3 h-3 bg-red-600 rounded-full"></span> Em
                   Risco
                 </div>
                 <div
-                  class="flex items-center gap-2 p-1.5 border border-ink/30 bg-indigo-500/10"
+                  class="flex items-center gap-2 p-2 border border-ink/30 bg-indigo-500/10"
                 >
-                  <span class="w-2.5 h-2.5 bg-indigo-600 rounded-full"></span>
+                  <span class="w-3 h-3 bg-indigo-600 rounded-full"></span>
                   Qualificado
                 </div>
                 <div
-                  class="flex items-center gap-2 p-1.5 border border-ink/30 bg-purple-500/10 col-span-2"
+                  class="flex items-center gap-2 p-2 border border-ink/30 bg-purple-500/10 col-span-2"
                 >
-                  <span class="w-2.5 h-2.5 bg-purple-600 rounded-full"></span>
+                  <span class="w-3 h-3 bg-purple-600 rounded-full"></span>
                   Em Fase de Defesa
                 </div>
                 <div
-                  class="flex items-center gap-2 p-1.5 border border-ink/30 bg-emerald-500/10"
+                  class="flex items-center gap-2 p-2 border border-ink/30 bg-emerald-500/10"
                 >
-                  <span class="w-2.5 h-2.5 bg-emerald-600 rounded-full"></span>
+                  <span class="w-3 h-3 bg-emerald-600 rounded-full"></span>
                   Concluído
                 </div>
                 <div
-                  class="flex items-center gap-2 p-1.5 border border-ink/30 bg-gray-500/10"
+                  class="flex items-center gap-2 p-2 border border-ink/30 bg-gray-500/10"
                 >
-                  <span class="w-2.5 h-2.5 bg-gray-600 rounded-full"></span>
+                  <span class="w-3 h-3 bg-gray-600 rounded-full"></span>
                   Desligado
                 </div>
               </div>
@@ -389,12 +400,12 @@
           </div>
 
           <div class="mb-4">
-            <span class="font-mono text-xs text-ink/60"
+            <span class="font-mono text-sm text-ink/85"
               >Fronteiras de domínio mapeadas para Clean Architecture & DDD no
               AXIOMA.</span
             >
           </div>
-          <div class="pagenum absolute right-12 bottom-8 font-mono text-xs">
+          <div class="pagenum absolute right-12 bottom-8 font-mono text-sm">
             02 / 08
           </div>
         </section>
@@ -407,11 +418,11 @@
         >
           <div>
             <span
-              class="font-mono text-xs tracking-wider block uppercase text-ink-soft mb-1 font-bold"
+              class="font-mono text-sm tracking-wider block uppercase text-ink-soft mb-2 font-bold"
               >02. Arquitetura</span
             >
             <h2
-              class="font-newsreader text-4xl md:text-5xl font-bold leading-tight mb-4"
+              class="font-newsreader text-5xl md:text-6xl font-bold leading-tight mb-4"
             >
               Clean Architecture em Sete Camadas
             </h2>
@@ -421,97 +432,96 @@
           <div class="grid grid-cols-12 gap-4 items-stretch my-auto">
             <!-- Camada Frontend -->
             <div
-              class="col-span-3 border border-ink p-3 flex flex-col justify-between bg-paper hover:bg-white transition-all shadow-sm"
+              class="col-span-3 border border-ink p-4 flex flex-col justify-between bg-paper hover:bg-white transition-all shadow-sm"
             >
               <span
-                class="font-mono text-[10px] tracking-widest font-bold block uppercase border-b border-ink/30 pb-1 mb-2 text-ink-soft"
+                class="font-mono text-[12px] tracking-widest font-bold block uppercase border-b border-ink/30 pb-1 mb-3 text-ink-soft"
                 >Presentation (React)</span
               >
-              <p class="text-xs leading-relaxed">
+              <p class="text-sm leading-relaxed">
                 Interface Web baseada em componentes, com roteamento e controle
                 de estado gerenciado com <strong>Zustand</strong>.
               </p>
               <div
-                class="font-mono text-[9px] mt-2 bg-ink/5 p-1 border border-ink/20"
+                class="font-mono text-[11px] mt-2 bg-ink/5 p-1.5 border border-ink/20"
               >
                 src/pages/*
               </div>
             </div>
 
-            <!-- Coluna Central: API, Aspectos, Casos de Uso, Domínio -->
-            <div class="col-span-6 flex flex-col gap-2 relative px-4">
+            <!-- Coluna Central: API, Aspectos, Casos de Uso, Domínio, Motor -->
+            <div class="col-span-6 flex flex-col gap-1.5 relative px-4">
               <!-- API (FastAPI) -->
               <div
-                class="border border-ink p-1.5 text-center bg-paper text-xs font-mono font-bold flex justify-between px-3 items-center"
+                class="border border-ink p-2 text-center bg-paper text-sm font-mono font-bold flex justify-between px-3 items-center"
               >
                 <span>[API] FastAPI Routers & Schemas</span>
-                <span class="text-[9px] font-normal text-ink/70">src/api/</span>
+                <span class="text-[11px] font-normal text-ink/70">src/api/</span>
               </div>
 
               <!-- Aspect Layer -->
               <div
-                class="border border-ink p-2 text-center bg-ink text-paper text-xs font-mono font-bold flex justify-between px-3 items-center shadow-md"
+                class="border border-ink p-2 text-center bg-ink text-paper text-sm font-mono font-bold flex justify-between px-3 items-center shadow-md"
               >
                 <span>[ASPECTS] Preocupações Transversais (AOP)</span>
-                <span class="text-[9px] font-normal text-paper/70"
+                <span class="text-[11px] font-normal text-paper/70"
                   >src/aspects/</span
                 >
               </div>
 
               <!-- Application Use Cases -->
               <div
-                class="border border-ink p-1.5 text-center bg-paper text-xs font-mono font-bold flex justify-between px-3 items-center"
+                class="border border-ink p-2 text-center bg-paper text-sm font-mono font-bold flex justify-between px-3 items-center"
               >
                 <span>[APPLICATION] Casos de Uso (Commands/Queries)</span>
-                <span class="text-[9px] font-normal text-ink/70"
+                <span class="text-[11px] font-normal text-ink/70"
                   >src/application/</span
                 >
               </div>
 
-              <!-- Domain & Inference Engine -->
-              <div class="grid grid-cols-2 gap-2 mt-1">
-                <div
-                  class="border border-ink p-2 bg-paper/80 flex flex-col justify-between"
+              <!-- Domain Core -->
+              <div
+                class="border border-ink p-1.5 bg-paper/80 flex flex-col justify-between"
+              >
+                <span
+                  class="font-mono text-[11px] font-bold block text-ink-soft uppercase border-b border-ink/20 pb-1 mb-1"
+                  >Domain Core</span
                 >
-                  <span
-                    class="font-mono text-[9px] font-bold block text-ink-soft uppercase border-b border-ink/20 pb-1 mb-1"
-                    >Domain Core</span
-                  >
-                  <span class="text-[10px] leading-snug"
-                    >Entidades puras, VOs, Domain Events e interfaces de
-                    Repos.</span
-                  >
-                </div>
-                <div
-                  class="border border-ink p-2 bg-paper/80 flex flex-col justify-between"
+                <span class="text-[12px] leading-snug"
+                  >Entidades puras, VOs, Domain Events, interfaces de Repos.</span
                 >
-                  <span
-                    class="font-mono text-[9px] font-bold block text-red-700 uppercase border-b border-ink/20 pb-1 mb-1"
-                    >Inference Engine</span
-                  >
-                  <span class="text-[10px] leading-snug"
-                    >Motor lógico próprio para unificação e avaliação de regras
-                    acadêmicas.</span
-                  >
-                </div>
+              </div>
+
+              <!-- Inference Engine (isolado) -->
+              <div
+                class="border border-ink p-5 bg-red-50/80 flex flex-col justify-between"
+              >
+                <span
+                  class="font-mono text-[11px] font-bold block text-red-700 uppercase border-b border-ink/20 pb-1 mb-1"
+                  >Inference Engine (isolado)</span
+                >
+                <span class="text-[12px] leading-snug"
+                  >Motor lógico próprio: unificação, resolução SLD, KB. Sem
+                  dependências externas.</span
+                >
               </div>
             </div>
 
             <!-- Camada de Infraestrutura -->
             <div
-              class="col-span-3 border border-ink p-3 flex flex-col justify-between bg-paper hover:bg-white transition-all shadow-sm"
+              class="col-span-3 border border-ink p-4 flex flex-col justify-between bg-paper hover:bg-white transition-all shadow-sm"
             >
               <span
-                class="font-mono text-[10px] tracking-widest font-bold block uppercase border-b border-ink/30 pb-1 mb-2 text-ink-soft"
+                class="font-mono text-[12px] tracking-widest font-bold block uppercase border-b border-ink/30 pb-1 mb-3 text-ink-soft"
                 >Infrastructure</span
               >
-              <p class="text-xs leading-relaxed">
+              <p class="text-sm leading-relaxed">
                 Adaptação de persistência usando o
                 <strong>Firebase Admin SDK</strong> com repositórios Firestore e
                 Storage.
               </p>
               <div
-                class="font-mono text-[9px] mt-2 bg-ink/5 p-1 border border-ink/20"
+                class="font-mono text-[11px] mt-2 bg-ink/5 p-1.5 border border-ink/20"
               >
                 src/infrastructure/
               </div>
@@ -519,12 +529,12 @@
           </div>
 
           <div class="mb-4">
-            <span class="font-mono text-xs text-ink/60"
+            <span class="font-mono text-sm text-ink/85"
               >As dependências sempre apontam para dentro: o Domínio e o Motor
               de Inferência são completamente independentes.</span
             >
           </div>
-          <div class="pagenum absolute right-12 bottom-8 font-mono text-xs">
+          <div class="pagenum absolute right-12 bottom-8 font-mono text-sm">
             03 / 08
           </div>
         </section>
@@ -537,11 +547,11 @@
         >
           <div>
             <span
-              class="font-mono text-xs tracking-wider block uppercase text-ink-soft mb-1 font-bold"
+              class="font-mono text-sm tracking-wider block uppercase text-ink-soft mb-2 font-bold"
               >03. Paradigma Orientado a Aspectos</span
             >
             <h2
-              class="font-newsreader text-4xl md:text-5xl font-bold leading-tight mb-2"
+              class="font-newsreader text-5xl md:text-6xl font-bold leading-tight mb-2"
             >
               Weaving Dinâmico de Aspectos Nativo
             </h2>
@@ -550,17 +560,17 @@
           <!-- Diagrama de Sequência AOP -->
           <div class="flex-1 my-auto flex flex-col justify-center">
             <span
-              class="font-mono text-[10px] tracking-wider uppercase block text-center mb-3 font-semibold text-ink/70"
+              class="font-mono text-xs tracking-wider uppercase block text-center mb-4 font-semibold text-ink/70"
               >Fluxo de Interceptação da Chamada (AOP Weaving)</span
             >
 
             <div
-              class="relative w-full h-[220px] flex justify-between px-6 border border-ink/30 bg-paper/40 py-4 font-mono text-xs"
+              class="relative w-full h-[300px] flex justify-between px-4 border border-ink/30 bg-paper/40 py-4 font-mono text-[12px]"
             >
               <!-- Colunas de Atores -->
-              <div class="flex flex-col items-center w-[16%]">
+              <div class="flex flex-col items-center w-[14%]">
                 <div
-                  class="border border-ink bg-paper px-2 py-1 font-bold text-[10px]"
+                  class="border border-ink bg-paper px-1.5 py-1 font-bold text-[11px]"
                 >
                   Client / API
                 </div>
@@ -568,9 +578,9 @@
                   class="w-[1px] border-l border-dashed border-ink flex-1 my-1"
                 ></div>
               </div>
-              <div class="flex flex-col items-center w-[16%]">
+              <div class="flex flex-col items-center w-[14%]">
                 <div
-                  class="border border-ink bg-ink text-paper px-2 py-1 font-bold text-[10px]"
+                  class="border border-ink bg-ink text-paper px-1.5 py-1 font-bold text-[11px]"
                 >
                   @authorize
                 </div>
@@ -578,9 +588,9 @@
                   class="w-[1px] border-l border-dashed border-ink flex-1 my-1"
                 ></div>
               </div>
-              <div class="flex flex-col items-center w-[16%]">
+              <div class="flex flex-col items-center w-[14%]">
                 <div
-                  class="border border-ink bg-ink text-paper px-2 py-1 font-bold text-[10px]"
+                  class="border border-ink bg-ink text-paper px-1.5 py-1 font-bold text-[11px]"
                 >
                   @audit
                 </div>
@@ -588,9 +598,9 @@
                   class="w-[1px] border-l border-dashed border-ink flex-1 my-1"
                 ></div>
               </div>
-              <div class="flex flex-col items-center w-[16%]">
+              <div class="flex flex-col items-center w-[14%]">
                 <div
-                  class="border border-ink bg-ink text-paper px-2 py-1 font-bold text-[9px]"
+                  class="border border-ink bg-ink text-paper px-1.5 py-1 font-bold text-[11px]"
                 >
                   @validate_deadline
                 </div>
@@ -598,9 +608,19 @@
                   class="w-[1px] border-l border-dashed border-ink flex-1 my-1"
                 ></div>
               </div>
-              <div class="flex flex-col items-center w-[16%]">
+              <div class="flex flex-col items-center w-[14%]">
                 <div
-                  class="border border-ink bg-paper px-2 py-1 font-bold text-[10px]"
+                  class="border border-ink bg-ink text-paper px-1.5 py-1 font-bold text-[11px]"
+                >
+                  @track_history
+                </div>
+                <div
+                  class="w-[1px] border-l border-dashed border-ink flex-1 my-1"
+                ></div>
+              </div>
+              <div class="flex flex-col items-center w-[14%]">
+                <div
+                  class="border border-ink bg-paper px-1.5 py-1 font-bold text-[11px]"
                 >
                   UseCase Core
                 </div>
@@ -608,9 +628,9 @@
                   class="w-[1px] border-l border-dashed border-ink flex-1 my-1"
                 ></div>
               </div>
-              <div class="flex flex-col items-center w-[16%]">
+              <div class="flex flex-col items-center w-[14%]">
                 <div
-                  class="border border-ink bg-ink text-paper px-2 py-1 font-bold text-[10px]"
+                  class="border border-ink bg-ink text-paper px-1.5 py-1 font-bold text-[11px]"
                 >
                   @notify
                 </div>
@@ -622,7 +642,7 @@
               <!-- Linhas de Sequência Animadas com SVGs -->
               <svg
                 class="absolute inset-0 w-full h-full pointer-events-none"
-                viewBox="0 0 800 220"
+                viewBox="0 0 840 260"
                 preserveAspectRatio="none"
               >
                 <defs>
@@ -640,112 +660,129 @@
                 </defs>
                 <!-- 1. Call to authorize -->
                 <path
-                  d="M 66.6 60 L 200 60"
+                  d="M 60 55 L 180 55"
                   stroke="#002ad9"
                   stroke-width="1.5"
                   marker-end="url(#arrow)"
                 />
                 <text
-                  x="133.3"
-                  y="52"
+                  x="120"
+                  y="48"
                   text-anchor="middle"
-                  class="font-mono text-[9px] fill-ink"
+                  class="font-mono text-[11px] fill-ink"
                 >
                   1. register()
                 </text>
 
                 <!-- 2. Call to audit -->
                 <path
-                  d="M 200 80 L 333.3 80"
+                  d="M 180 80 L 300 80"
                   stroke="#002ad9"
                   stroke-width="1.5"
                   marker-end="url(#arrow)"
                 />
                 <text
-                  x="266.6"
-                  y="72"
+                  x="240"
+                  y="73"
                   text-anchor="middle"
-                  class="font-mono text-[9px] fill-ink"
+                  class="font-mono text-[11px] fill-ink"
                 >
                   2. check_role()
                 </text>
 
                 <!-- 3. Call to deadline -->
                 <path
-                  d="M 333.3 100 L 466.6 100"
+                  d="M 300 105 L 420 105"
                   stroke="#002ad9"
                   stroke-width="1.5"
                   marker-end="url(#arrow)"
                 />
                 <text
-                  x="400"
-                  y="92"
+                  x="360"
+                  y="98"
                   text-anchor="middle"
-                  class="font-mono text-[9px] fill-ink"
+                  class="font-mono text-[11px] fill-ink"
                 >
-                  3. log_start()
+                  3. check_date()
                 </text>
 
-                <!-- 4. Call to UseCase -->
+                <!-- 4. Call to track_history -->
                 <path
-                  d="M 466.6 120 L 600 120"
+                  d="M 420 130 L 540 130"
                   stroke="#002ad9"
                   stroke-width="1.5"
                   marker-end="url(#arrow)"
                 />
                 <text
-                  x="533.3"
-                  y="112"
+                  x="480"
+                  y="123"
                   text-anchor="middle"
-                  class="font-mono text-[9px] fill-ink"
+                  class="font-mono text-[11px] fill-ink"
                 >
-                  4. check_date()
+                  4. capture_diff()
                 </text>
 
-                <!-- 5. Call to notify -->
+                <!-- 5. Call to UseCase -->
                 <path
-                  d="M 600 140 L 733.3 140"
+                  d="M 540 155 L 660 155"
                   stroke="#002ad9"
                   stroke-width="1.5"
                   marker-end="url(#arrow)"
                 />
                 <text
-                  x="666.6"
-                  y="132"
+                  x="600"
+                  y="148"
                   text-anchor="middle"
-                  class="font-mono text-[9px] fill-ink"
+                  class="font-mono text-[11px] fill-ink"
                 >
                   5. execute_logic()
                 </text>
 
-                <!-- 6. Notify event (self-loop on @notify) -->
+                <!-- 6. Call to notify -->
                 <path
-                  d="M 733.3 150 C 765 150 765 180 733.3 180"
+                  d="M 660 180 L 780 180"
+                  stroke="#002ad9"
+                  stroke-width="1.5"
+                  marker-end="url(#arrow)"
+                />
+                <text
+                  x="720"
+                  y="173"
+                  text-anchor="middle"
+                  class="font-mono text-[11px] fill-ink"
+                >
+                  6. dispatch_alert()
+                </text>
+
+                <!-- 7. track_history self-loop (save version) -->
+                <path
+                  d="M 540 195 C 570 195 570 225 540 225"
                   stroke="#002ad9"
                   stroke-width="1.5"
                   stroke-dasharray="3,3"
                   marker-end="url(#arrow)"
                 />
                 <text
-                  x="733.3"
-                  y="142"
+                  x="540"
+                  y="190"
                   text-anchor="middle"
-                  class="font-mono text-[9px] fill-ink"
+                  class="font-mono text-[11px] fill-ink"
                 >
-                  6. dispatch_alert()
+                  7. save_version()
                 </text>
               </svg>
             </div>
           </div>
 
           <div class="mb-4">
-            <span class="font-mono text-xs text-ink/60"
+            <span class="font-mono text-sm text-ink/85"
               >Conceito de Aspects, Join Points (interceptação de chamadas) e
               Advices (Before, Around, After) implementados sem bibliotecas
-              externas.</span
+              externas. Weaving estático via metaclasses e dinâmico via
+              decorators.</span
             >
           </div>
-          <div class="pagenum absolute right-12 bottom-8 font-mono text-xs">
+          <div class="pagenum absolute right-12 bottom-8 font-mono text-sm">
             04 / 08
           </div>
         </section>
@@ -758,11 +795,11 @@
         >
           <div>
             <span
-              class="font-mono text-xs tracking-wider block uppercase text-ink-soft mb-1 font-bold"
+              class="font-mono text-sm tracking-wider block uppercase text-ink-soft mb-2 font-bold"
               >04. Paradigma Lógico</span
             >
             <h2
-              class="font-newsreader text-4xl md:text-5xl font-bold leading-tight mb-4"
+              class="font-newsreader text-5xl md:text-6xl font-bold leading-tight mb-4"
             >
               Motor de Inferência Lógica Próprio
             </h2>
@@ -772,21 +809,21 @@
           <div class="grid grid-cols-2 gap-8 items-stretch my-auto">
             <!-- Lado Esquerdo: Engenharia do Motor -->
             <div
-              class="border border-ink p-4 bg-paper/60 flex flex-col justify-between text-xs"
+              class="border border-ink p-5 bg-paper/60 flex flex-col justify-between text-base"
             >
               <div>
                 <span
-                  class="font-mono text-[10px] tracking-widest font-bold block uppercase border-b border-ink/30 pb-2 mb-2 text-ink-soft"
+                  class="font-mono text-[12px] tracking-widest font-bold block uppercase border-b border-ink/30 pb-2 mb-3 text-ink-soft"
                   >Resolução SLD e Unificação</span
                 >
-                <p class="leading-relaxed mb-3">
+                <p class="leading-relaxed mb-3 text-base">
                   Implementação do zero de termos (Átomos, Compostos, Variáveis
                   lógicas) e o algoritmo de unificação. O Resolvedor recursivo
                   realiza o backtracking na Base de Conhecimento.
                 </p>
               </div>
               <div
-                class="font-mono text-[9px] bg-ink/5 p-2 border border-ink/20 leading-relaxed"
+                class="font-mono text-sm bg-ink/5 p-3 border border-ink/20 leading-relaxed"
               >
                 <strong>Substituição</strong>: Mapeamento de
                 <span class="text-ink-soft">Variavel -> Termo</span><br />
@@ -800,15 +837,15 @@
 
             <!-- Lado Direito: Regras Acadêmicas Lógicas -->
             <div
-              class="border border-ink p-4 bg-paper/60 flex flex-col justify-between text-xs font-mono"
+              class="border border-ink p-5 bg-paper/60 flex flex-col justify-between text-base font-mono"
             >
               <div>
                 <span
-                  class="font-mono text-[10px] tracking-widest font-bold block uppercase border-b border-ink/30 pb-2 mb-2 text-ink-soft"
+                  class="font-mono text-[12px] tracking-widest font-bold block uppercase border-b border-ink/30 pb-2 mb-3 text-ink-soft"
                   >Regras Declarativas (Prolog-style)</span
                 >
-                <div class="space-y-2 text-[10px]">
-                  <div class="p-1.5 bg-ink/5 border border-ink/10">
+                <div class="space-y-3 text-sm">
+                  <div class="p-2 bg-ink/5 border border-ink/10">
                     <span class="text-ink font-semibold">apto_defesa(A) :-</span
                     ><br />
                     &nbsp;&nbsp;tem_creditos_minimos(A),
@@ -816,7 +853,7 @@
                     &nbsp;&nbsp;producao_validada(A), plano_concluido(A),<br />
                     &nbsp;&nbsp;prazo_ok(A).
                   </div>
-                  <div class="p-1.5 bg-ink/5 border border-ink/10">
+                  <div class="p-2 bg-ink/5 border border-ink/10">
                     <span class="text-ink font-semibold"
                       >creditos_validos(A) :-</span
                     ><br />
@@ -831,14 +868,15 @@
             </div>
           </div>
 
-          <div class="mb-4">
-            <span class="font-mono text-xs text-ink/60"
+              <div class="mb-4">
+            <span class="font-mono text-sm text-ink/85"
               >As políticas acadêmicas são expressas como regras lógicas
               declarativas, separando o resolvedor lógicos dos fatos do banco de
-              dados.</span
+              dados. Implementado 100% em Python puro, sem bibliotecas externas
+              de PL.</span
             >
           </div>
-          <div class="pagenum absolute right-12 bottom-8 font-mono text-xs">
+          <div class="pagenum absolute right-12 bottom-8 font-mono text-sm">
             05 / 08
           </div>
         </section>
@@ -851,11 +889,11 @@
         >
           <div>
             <span
-              class="font-mono text-xs tracking-wider block uppercase text-ink-soft mb-1 font-bold"
+              class="font-mono text-sm tracking-wider block uppercase text-ink-soft mb-2 font-bold"
               >05. Demonstração</span
             >
             <h2
-              class="font-newsreader text-4xl md:text-5xl font-bold leading-tight mb-4"
+              class="font-newsreader text-5xl md:text-6xl font-bold leading-tight mb-4"
             >
               Demonstração Prática do Sistema
             </h2>
@@ -866,7 +904,7 @@
             class="my-auto flex flex-col items-center justify-center text-center"
           >
             <div
-              class="border-2 border-ink p-8 bg-paper max-w-2xl relative shadow-md"
+              class="border-2 border-ink p-10 bg-paper max-w-2xl relative shadow-md"
             >
               <div
                 class="absolute -top-3 -left-3 w-6 h-6 border-t-2 border-l-2 border-ink bg-paper"
@@ -876,21 +914,21 @@
               ></div>
 
               <span
-                class="font-mono text-xs tracking-[0.2em] font-bold block mb-2 text-ink-soft uppercase"
+                class="font-mono text-sm tracking-[0.2em] font-bold block mb-3 text-ink-soft uppercase"
                 >LIVE DEMO</span
               >
-              <h3 class="font-newsreader text-3xl font-bold text-ink mb-4">
+              <h3 class="font-newsreader text-4xl font-bold text-ink mb-5">
                 Hora de Ver em Ação!
               </h3>
 
-              <p class="font-hanken text-sm leading-relaxed text-ink/90 mb-6">
+              <p class="font-hanken text-base leading-relaxed text-ink/90 mb-6">
                 A validação do projeto será realizada diretamente através da
                 interface gráfica da solução desenvolvida, ilustrando os fluxos
                 de ponta a ponta e a integração dos paradigmas.
               </p>
 
               <div
-                class="grid grid-cols-2 gap-4 text-left font-mono text-[11px] border-t border-ink/30 pt-4"
+                class="grid grid-cols-2 gap-4 text-left font-mono text-[13px] border-t border-ink/30 pt-4"
               >
                 <div class="flex items-start gap-2">
                   <span class="text-ink">✔</span>
@@ -913,12 +951,12 @@
           </div>
 
           <div class="mb-4">
-            <span class="font-mono text-xs text-ink/60"
+            <span class="font-mono text-sm text-ink/85"
               >A demonstração prática abrange a experiência integrada dos papéis
               de Aluno, Orientador e Coordenação.</span
             >
           </div>
-          <div class="pagenum absolute right-12 bottom-8 font-mono text-xs">
+          <div class="pagenum absolute right-12 bottom-8 font-mono text-sm">
             06 / 08
           </div>
         </section>
@@ -931,28 +969,28 @@
         >
           <div>
             <span
-              class="font-mono text-xs tracking-wider block uppercase text-ink-soft mb-1 font-bold"
+              class="font-mono text-sm tracking-wider block uppercase text-ink-soft mb-2 font-bold"
               >06. Inteligência Artificial</span
             >
             <h2
-              class="font-newsreader text-4xl md:text-5xl font-bold leading-tight mb-4"
+              class="font-newsreader text-5xl md:text-6xl font-bold leading-tight mb-4"
             >
               Declaração de Uso de IA
             </h2>
           </div>
 
           <!-- Conteúdo em duas colunas -->
-          <div class="grid grid-cols-2 gap-8 items-stretch my-auto text-xs">
+          <div class="grid grid-cols-2 gap-8 items-stretch my-auto text-base">
             <!-- Esquerda: Escopo de Utilização -->
             <div
-              class="border border-ink p-4 bg-paper/60 flex flex-col justify-between"
+              class="border border-ink p-5 bg-paper/60 flex flex-col justify-between"
             >
               <div>
                 <span
-                  class="font-mono text-[10px] tracking-widest font-bold block uppercase border-b border-ink/30 pb-2 mb-2 text-ink-soft"
+                  class="font-mono text-sm tracking-widest font-bold block uppercase border-b border-ink/30 pb-2 mb-3 text-ink-soft"
                   >Apoio Técnico no Desenvolvimento</span
                 >
-                <ul class="space-y-3 leading-relaxed">
+                <ul class="space-y-4 leading-relaxed">
                   <li>
                     <strong class="text-ink">Design de Algoritmos</strong>:
                     Auxílio na estruturação e validação lógica do resolvedor
@@ -976,14 +1014,14 @@
 
             <!-- Direita: Transparência e Responsabilidade -->
             <div
-              class="border border-ink p-4 bg-paper/60 flex flex-col justify-between"
+              class="border border-ink p-5 bg-paper/60 flex flex-col justify-between"
             >
               <div>
                 <span
-                  class="font-mono text-[10px] tracking-widest font-bold block uppercase border-b border-ink/30 pb-2 mb-2 text-ink-soft"
+                  class="font-mono text-sm tracking-widest font-bold block uppercase border-b border-ink/30 pb-2 mb-3 text-ink-soft"
                   >Transparência &amp; Responsabilidade Humana</span
                 >
-                <ul class="space-y-3 leading-relaxed">
+                <ul class="space-y-4 leading-relaxed">
                   <li>
                     <strong class="text-ink">Conformidade Pedagógica</strong>:
                     Alinhamento estrito com a Seção 2 do Plano de Ensino da
@@ -1007,12 +1045,12 @@
           </div>
 
           <div class="mb-4">
-            <span class="font-mono text-xs text-ink/60"
+            <span class="font-mono text-sm text-ink/85"
               >Declaração obrigatória apresentada em conformidade com as
               diretrizes éticas e acadêmicas de AL0337 - RP III.</span
             >
           </div>
-          <div class="pagenum absolute right-12 bottom-8 font-mono text-xs">
+          <div class="pagenum absolute right-12 bottom-8 font-mono text-sm">
             07 / 08
           </div>
         </section>
@@ -1025,27 +1063,27 @@
         >
           <div>
             <span
-              class="font-mono text-xs tracking-wider block uppercase text-ink-soft mb-1 font-bold"
+              class="font-mono text-sm tracking-wider block uppercase text-ink-soft mb-2 font-bold"
               >07. Conclusão</span
             >
             <h2
-              class="font-newsreader text-4xl md:text-5xl font-bold leading-tight mb-4"
+              class="font-newsreader text-5xl md:text-6xl font-bold leading-tight mb-4"
             >
               Robustez de Engenharia de Software
             </h2>
           </div>
 
           <!-- Cartões com métricas e Clean Code -->
-          <div class="grid grid-cols-3 gap-6 my-auto items-stretch">
+          <div class="grid grid-cols-3 gap-8 my-auto items-stretch">
             <div
-              class="border border-ink p-4 bg-paper/60 flex flex-col justify-between"
+              class="border border-ink p-5 bg-paper/60 flex flex-col justify-between"
             >
               <div>
                 <span
-                  class="font-mono text-[10px] tracking-widest font-bold block uppercase border-b border-ink/30 pb-2 mb-2 text-ink-soft"
+                  class="font-mono text-sm tracking-widest font-bold block uppercase border-b border-ink/30 pb-2 mb-3 text-ink-soft"
                   >Testes e Cobertura</span
                 >
-                <p class="text-xs leading-relaxed text-ink/90">
+                <p class="text-base leading-relaxed text-ink/90">
                   Suíte de testes automatizados com
                   <strong>pytest</strong> cobrindo o motor de inferência lógica
                   isolado e todos os decoradores e metaclasses dos aspectos
@@ -1053,42 +1091,42 @@
                 </p>
               </div>
               <div
-                class="font-mono text-[9px] bg-green-500/10 border border-green-700/30 text-green-800 p-1.5 mt-2 font-bold text-center"
+                class="font-mono text-[12px] bg-green-500/10 border border-green-700/30 text-green-800 p-2 mt-3 font-bold text-center"
               >
-                100% Tests Passed (Pytest Suite)
+                CI: Ruff · Black · MyPy · Pylint ≥9.0 · Bandit · Pytest
               </div>
             </div>
 
             <div
-              class="border border-ink p-4 bg-paper/60 flex flex-col justify-between"
+              class="border border-ink p-5 bg-paper/60 flex flex-col justify-between"
             >
               <div>
                 <span
-                  class="font-mono text-[10px] tracking-widest font-bold block uppercase border-b border-ink/30 pb-2 mb-2 text-ink-soft"
+                  class="font-mono text-sm tracking-widest font-bold block uppercase border-b border-ink/30 pb-2 mb-3 text-ink-soft"
                   >Manutenibilidade</span
                 >
-                <p class="text-xs leading-relaxed text-ink/90">
+                <p class="text-base leading-relaxed text-ink/90">
                   Separação estrita de interesses através de Clean Architecture.
                   Modificar regras acadêmicas envolve apenas a Base de Regras
                   Lógicas; o restante da aplicação permanece inalterado.
                 </p>
               </div>
               <div
-                class="font-mono text-[9px] bg-ink/5 border border-ink/20 text-ink p-1.5 mt-2 font-bold text-center"
+                class="font-mono text-[12px] bg-ink/5 border border-ink/20 text-ink p-2 mt-3 font-bold text-center"
               >
                 Clean Architecture & DDD
               </div>
             </div>
 
             <div
-              class="border border-ink p-4 bg-paper/60 flex flex-col justify-between"
+              class="border border-ink p-5 bg-paper/60 flex flex-col justify-between"
             >
               <div>
                 <span
-                  class="font-mono text-[10px] tracking-widest font-bold block uppercase border-b border-ink/30 pb-2 mb-2 text-ink-soft"
+                  class="font-mono text-sm tracking-widest font-bold block uppercase border-b border-ink/30 pb-2 mb-3 text-ink-soft"
                   >Integração Prática</span
                 >
-                <p class="text-xs leading-relaxed text-ink/90">
+                <p class="text-base leading-relaxed text-ink/90">
                   Os aspectos AOP interceptam comandos de domínio com segurança
                   técnica e consultam o motor de inferência lógica para
                   reavaliar a situação acadêmica do discente de forma
@@ -1096,7 +1134,7 @@
                 </p>
               </div>
               <div
-                class="font-mono text-[9px] bg-ink/5 border border-ink/20 text-ink p-1.5 mt-2 font-bold text-center"
+                class="font-mono text-[12px] bg-ink/5 border border-ink/20 text-ink p-2 mt-3 font-bold text-center"
               >
                 Weaving Lógico + Aspectos
               </div>
@@ -1107,7 +1145,7 @@
           <div
             class="flex justify-between items-end border-t border-ink/40 pt-4 mb-2"
           >
-            <span class="font-mono text-xs text-ink/70"
+            <span class="font-mono text-base text-ink/70"
               >Obrigado pela atenção! Agradecimentos à banca avaliadora.</span
             >
             <!-- Logo reduzido -->
@@ -1121,7 +1159,7 @@
               />
             </div>
           </div>
-          <div class="pagenum absolute right-12 bottom-8 font-mono text-xs">
+          <div class="pagenum absolute right-12 bottom-8 font-mono text-sm">
             08 / 08
           </div>
         </section>
@@ -1133,7 +1171,7 @@
       class="hud fixed left-0 right-0 bottom-4 z-50 flex justify-between items-center px-12 pointer-events-none"
     >
       <div
-        class="font-mono text-xs tracking-wider text-paper/70 font-semibold select-none"
+        class="font-mono text-sm tracking-wider text-paper/70 font-semibold select-none"
       >
         AXIOMA: APRESENTAÇÃO DE PARADIGMAS
       </div>
@@ -1155,7 +1193,7 @@
           &gt;
         </button>
       </div>
-      <div class="font-mono text-xs text-paper/60 select-none">
+      <div       class="font-mono text-sm text-paper/60 select-none">
         F11 para Tela Cheia · ← / →
       </div>
     </div>
