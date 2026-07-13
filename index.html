@@ -19,9 +19,9 @@
           extend: {
             colors: {
               paper: "#F0EBDE" /* Fundo creme quente */,
-              ink: "#002ad9" /* Azul Cobalto do Logo */,
-              "ink-soft": "#4255ff" /* Acento azul mais claro */,
-              grid: "rgba(0, 42, 217, 0.08)" /* Grade milimétrica tênue */,
+              ink: "#001fb3" /* Azul Cobalto Escurecido para melhor legibilidade */,
+              "ink-soft": "#1e35ff" /* Acento azul mais escuro */,
+              grid: "rgba(0, 31, 179, 0.15)" /* Grade milimétrica com contraste ampliado */,
             },
             fontFamily: {
               newsreader: ["Newsreader", "Georgia", "serif"],
@@ -36,8 +36,8 @@
     <style>
       :root {
         --paper: #f0ebde;
-        --ink: #002ad9;
-        --grid: rgba(0, 42, 217, 0.08);
+        --ink: #001fb3;
+        --grid: rgba(0, 31, 179, 0.15);
       }
 
       * {
@@ -135,7 +135,7 @@
         position: absolute;
         left: clamp(36px, 3.6vw, 80px);
         right: clamp(36px, 3.6vw, 80px);
-        height: 1.5px;
+        height: 2.5px;
         background: var(--ink);
         z-index: 4;
         pointer-events: none;
@@ -268,18 +268,27 @@
             <div>
               <span
                 class="font-mono text-[10px] uppercase tracking-wider block text-ink/70"
-                >Discentes</span
+                >Discentes (Grupo AXIOMA)</span
               >
-              <span class="font-hanken text-sm md:text-base font-semibold block"
-                >Grupo AXIOMA</span
+              <div
+                class="font-hanken text-[11px] font-semibold leading-normal mt-1 text-ink"
               >
+                <span class="block">Diogo [Sobrenome] — R.A. [Matrícula]</span>
+                <span class="block text-ink/70"
+                  >[Nome do Integrante 2] — R.A. [Matrícula]</span
+                >
+                <span class="block text-ink/70"
+                  >[Nome do Integrante 3] — R.A. [Matrícula]</span
+                >
+              </div>
             </div>
             <div>
               <span
                 class="font-mono text-[10px] uppercase tracking-wider block text-ink/70"
                 >Componente Curricular</span
               >
-              <span class="font-hanken text-sm md:text-base font-semibold block"
+              <span
+                class="font-hanken text-sm md:text-base font-semibold block text-ink"
                 >AL0337 — Resolução de Problemas III (UNIPAMPA)</span
               >
             </div>
@@ -288,7 +297,8 @@
                 class="font-mono text-[10px] uppercase tracking-wider block text-ink/70"
                 >Docentes</span
               >
-              <span class="font-hanken text-sm md:text-base font-semibold block"
+              <span
+                class="font-hanken text-sm md:text-base font-semibold block text-ink"
                 >Prof. Paulo Silas Severo &amp; Prof. Silvio Ereno
                 Quincozes</span
               >
@@ -861,20 +871,10 @@
             </h2>
           </div>
 
-          <!-- Card centralizado chamando para a Demo -->
-          <div
-            class="my-auto flex flex-col items-center justify-center text-center"
-          >
-            <div
-              class="border-2 border-ink p-8 bg-paper max-w-2xl relative shadow-md"
-            >
-              <div
-                class="absolute -top-3 -left-3 w-6 h-6 border-t-2 border-l-2 border-ink bg-paper"
-              ></div>
-              <div
-                class="absolute -bottom-3 -right-3 w-6 h-6 border-b-2 border-r-2 border-ink bg-paper"
-              ></div>
-
+          <!-- Layout em duas colunas: Informações e CSS Placeholder Mock -->
+          <div class="grid grid-cols-12 gap-8 items-center my-auto">
+            <!-- Lado Esquerdo: Descrição e Checklist -->
+            <div class="col-span-6 flex flex-col justify-center">
               <span
                 class="font-mono text-xs tracking-[0.2em] font-bold block mb-2 text-ink-soft uppercase"
                 >LIVE DEMO</span
@@ -882,7 +882,6 @@
               <h3 class="font-newsreader text-3xl font-bold text-ink mb-4">
                 Hora de Ver em Ação!
               </h3>
-
               <p class="font-hanken text-sm leading-relaxed text-ink/90 mb-6">
                 A validação do projeto será realizada diretamente através da
                 interface gráfica da solução desenvolvida, ilustrando os fluxos
@@ -890,7 +889,7 @@
               </p>
 
               <div
-                class="grid grid-cols-2 gap-4 text-left font-mono text-[11px] border-t border-ink/30 pt-4"
+                class="grid grid-cols-1 gap-2.5 font-mono text-[11px] border-t border-ink/30 pt-4"
               >
                 <div class="flex items-start gap-2">
                   <span class="text-ink">✔</span>
@@ -898,7 +897,9 @@
                 </div>
                 <div class="flex items-start gap-2">
                   <span class="text-ink">✔</span>
-                  <span>Inferência de Situação Acadêmica pelo Motor</span>
+                  <span
+                    >Inferência de Situação Acadêmica pelo Motor Lógico</span
+                  >
                 </div>
                 <div class="flex items-start gap-2">
                   <span class="text-ink">✔</span>
@@ -907,6 +908,109 @@
                 <div class="flex items-start gap-2">
                   <span class="text-ink">✔</span>
                   <span>Checklist Dinâmico de Integralização de Créditos</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Lado Direito: CSS Placeholder Mock da Interface -->
+            <div class="col-span-6 flex flex-col justify-center items-center">
+              <div
+                class="w-full max-w-[420px] aspect-[4/3] border-2 border-ink bg-paper p-3 shadow-md relative overflow-hidden font-hanken text-[10px] text-ink select-none flex flex-col justify-between"
+              >
+                <!-- Barra superior simulando janela do navegador/app -->
+                <div
+                  class="flex justify-between items-center border-b border-ink/40 pb-2 mb-2"
+                >
+                  <div class="flex gap-1">
+                    <span
+                      class="w-1.5 h-1.5 rounded-full border border-ink bg-transparent"
+                    ></span>
+                    <span
+                      class="w-1.5 h-1.5 rounded-full border border-ink bg-transparent"
+                    ></span>
+                    <span
+                      class="w-1.5 h-1.5 rounded-full border border-ink bg-transparent"
+                    ></span>
+                  </div>
+                  <span class="font-mono text-[8px] font-bold tracking-wider"
+                    >[ INTERFACE PREVIEW - PLACEHOLDER ]</span
+                  >
+                  <div
+                    class="w-4 h-4 border border-ink rounded-full flex items-center justify-center font-bold text-[8px]"
+                  >
+                    LM
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-12 gap-2 flex-1">
+                  <!-- Sidebar simulada -->
+                  <div
+                    class="col-span-3 border-r border-ink/30 pr-1 flex flex-col gap-1.5 font-mono text-[7px]"
+                  >
+                    <div class="font-bold border-b border-ink/20 pb-0.5 mb-0.5">
+                      AXIOMA
+                    </div>
+                    <div class="bg-ink/10 px-1 py-0.5">■ Dashboard</div>
+                    <div class="px-1 text-ink/70">□ Perfil</div>
+                    <div class="px-1 text-ink/70">□ Acadêmico</div>
+                    <div class="px-1 text-ink/70">□ Relatórios</div>
+                  </div>
+
+                  <!-- Conteúdo principal simulado -->
+                  <div class="col-span-9 pl-1 flex flex-col gap-2">
+                    <!-- Card de Aluno -->
+                    <div
+                      class="border border-ink p-1.5 bg-paper flex justify-between items-center"
+                    >
+                      <div>
+                        <div class="font-bold text-[9px]">Luis Marques</div>
+                        <div class="text-[7px] text-ink/80 font-mono">
+                          Matrícula: 202310145
+                        </div>
+                      </div>
+                      <div
+                        class="border border-ink px-1.5 py-0.5 bg-ink text-paper font-mono text-[7px] font-bold"
+                      >
+                        [✓] Regular
+                      </div>
+                    </div>
+
+                    <!-- Card de Créditos -->
+                    <div
+                      class="border border-ink p-1.5 bg-paper flex flex-col gap-1"
+                    >
+                      <div
+                        class="flex justify-between font-mono text-[7px] font-bold"
+                      >
+                        <span>Progresso de Créditos</span>
+                        <span>72% (108/150)</span>
+                      </div>
+                      <div
+                        class="w-full h-2 border border-ink bg-ink/10 p-[1px]"
+                      >
+                        <div class="h-full bg-ink w-[72%]"></div>
+                      </div>
+                    </div>
+
+                    <!-- Card de Logs AOP -->
+                    <div
+                      class="border border-ink p-1.5 bg-paper/60 font-mono text-[6px] flex-1 flex flex-col gap-1 text-ink/80"
+                    >
+                      <div
+                        class="font-bold border-b border-ink/20 pb-0.5 mb-0.5"
+                      >
+                        Aspect-Oriented Intercepted Logs
+                      </div>
+                      <div class="flex justify-between text-green-700">
+                        <span>@authorize (check_role)</span>
+                        <span>SUCCESS</span>
+                      </div>
+                      <div class="flex justify-between text-green-700">
+                        <span>@audit (log_action)</span>
+                        <span>LOGGED</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
